@@ -1,0 +1,93 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Appointment</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript">
+        window.onload = function () {
+            ShowSection('add_meeting');
+        };
+        function ShowSection(section_name) {
+            HideSection();
+            document.getElementById(section_name).style.display = 'inline';
+        }
+        function HideSection() {
+            document.getElementById('add_meeting').style.display = 'none';
+            document.getElementById('today_meeting').style.display = 'none';
+            document.getElementById('all_meeting').style.display = 'none';
+            document.getElementById('all_contact').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>My Appointment</h1>
+    </header>
+    <nav>
+        <ul id="menu">
+            <li><a href="#add_meeting" onclick="ShowSection('add_meeting')">New</a></li>
+            <li><a href="#today_meeting" onclick="ShowSection('today_meeting')">Today</a></li>
+            <li><a href="#all_meeting" onclick="ShowSection('all_meeting')">All</a></li>
+            <li><a href="#all_contact" onclick="ShowSection('all_contact')">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <article id="add_meeting">
+            <h2>New Appointment</h2>
+            <p>
+                Date Appointment :
+                <input type="date" id="appointment_date" />
+            </p>
+            <p>
+                Person to meet :
+                <input style="width:100%" type="text" id="appointment_person" />
+            </p>
+            <p>
+                Place :
+                <input style="width:100%" type="text" id="appointment_place" />
+            </p>
+            <p>
+                Note :<br />
+                <textarea style="width:100%" id="appointment_note"></textarea>
+            </p>
+            <button id="btnAdd">Save Appointment</button>
+        </article>
+        <article id="today_meeting">
+            <h2>Today Meeting</h2>
+            <section>
+                <h3>Appointment 1</h3>
+                <p>Something to do</p>
+            </section>
+        </article>
+        <article id="all_meeting">
+            <h2>All Meeting</h2>
+            <section>
+                <h3>Appointment 1</h3>
+                <p>Something to do</p>
+            </section>
+            <section>
+                <h3>Appointment 2</h3>
+                <p>Something to do</p>
+            </section>
+        </article>
+        <article id="all_contact">
+            <h2>All Contact</h2>
+            <section>
+                <h3>Mr.A</h3>
+                <p>000-00000</p>
+            </section>
+        </article>
+        <aside>
+            <h2>Links</h2>
+            <p>
+                <a href="http://www.facebook.com/vierklar.7">Facebook</a>
+            </p>
+            <p>
+                <a href="http://www.twitter.com/wuzetiandebator">Twitter
+            </p>
+        </aside>
+    </main>
+    <footer>
+        <p>©Developed by : Me</p>
+    </footer>
+</body>

@@ -1,0 +1,88 @@
+/* || General setup */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #a9a9a9;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  background: #2f3036;
+  width:100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+li a {
+  display: inline-block;
+  min-width: 160px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+
+li:hover a {
+  background: #19c589;
+}
+
+@media screen and (max-width: 640px) {
+  nav,
+  ul li,
+  li a {
+    width: 100%;
+  }
+}
+
+article,
+aside,
+footer {
+  background-color: white;
+  padding: 1%;
+}
+
+/* || main layout */
+input[type="text"] {
+  height: 10%;
+}
+
+textarea {
+  height: 30%;
+}
+
+main {
+  display:flex;
+}
+
+article {
+  width:80%;
+}
+
+aside {
+  width:20%;
+  background-color: aquamarine;
+}
+
+footer {
+  background-color: lightskyblue;
+}
